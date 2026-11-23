@@ -1,7 +1,7 @@
 from .models import CarMake, CarModel
 
-def initiate():
 
+def initiate():
     car_make_data = [
         {"name": "NISSAN", "description": "Great cars. Japanese technology"},
         {"name": "Mercedes", "description": "Great cars. German technology"},
@@ -45,4 +45,4 @@ def initiate():
             type=car_type,
             year=2023,
             dealer_id=0
-        )
+        )git add server/djangoapp/populate.py
