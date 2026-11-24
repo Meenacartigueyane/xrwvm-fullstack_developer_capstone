@@ -1,3 +1,4 @@
+
 from .models import CarMake, CarModel
 
 
@@ -45,4 +46,4 @@ def initiate():
             type=car_type,
             year=2023,
             dealer_id=0
-        )git add server/djangoapp/populate.py
+        )
