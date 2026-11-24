@@ -1,24 +1,100 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact Us - Best Cars Dealerships</title>
 
-    <!-- CSS Stylesheets -->
+    <!-- Required CSS Stylesheets -->
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: darkturquoise;
+            min-height: 80px;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            font-weight: bold;
+            color: #222 !important;
+        }
+
+        .nav-link {
+            color: #222 !important;
+            font-weight: 500;
+            margin-left: 15px;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .contact-container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 45px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-header h1 {
+            font-weight: bold;
+        }
+
+        .contact-details {
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .contact-details h5 {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .contact-image {
+            width: 200px;
+            max-width: 100%;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .navbar-brand {
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light"
-         style="background-color: darkturquoise; min-height: 80px;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
 
-            <h2 style="padding-right: 5%;">Dealerships</h2>
+            <a class="navbar-brand" href="/">Dealerships</a>
 
             <button class="navbar-toggler" type="button"
                     data-bs-toggle="collapse"
@@ -30,6 +106,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarText">
+
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item">
@@ -42,8 +119,8 @@
 
                     <li class="nav-item">
                         <a class="nav-link active"
-                           aria-current="page"
-                           href="/contact">Contact Us</a>
+                           href="/contact"
+                           aria-current="page">Contact Us</a>
                     </li>
 
                 </ul>
@@ -52,15 +129,14 @@
     </nav>
 
     <!-- Contact Us Section -->
-    <div class="card"
-         style="width: 80%; margin: auto; margin-top: 5%; padding: 25px;">
+    <main class="contact-container">
 
-        <div class="banner text-center" name="contact-header">
+        <div class="contact-header">
             <h1>Contact Us</h1>
             <p>We would love to hear from you!</p>
         </div>
 
-        <div class="card-body text-center">
+        <div class="contact-details">
 
             <h3>Get in Touch</h3>
 
@@ -70,29 +146,31 @@
                 using the details below.
             </p>
 
-            <div style="margin-top: 25px;">
+            <h5>Our Address</h5>
+            <p>123 Main Street, Chicago, IL 60601, USA</p>
 
-                <h5>Our Address</h5>
-                <p>123 Main Street, Chicago, IL 60601, USA</p>
+            <h5>Phone Number</h5>
+            <p>+1 312-555-0148</p>
 
-                <h5>Phone Number</h5>
-                <p>+1 312-555-0148</p>
+            <h5>Email Address</h5>
+            <p>
+                <a href="mailto:support@bestcars.com">
+                    support@bestcars.com
+                </a>
+            </p>
 
-                <h5>Email Address</h5>
-                <p>support@bestcars.com</p>
-
-                <h5>Business Hours</h5>
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-
-            </div>
+            <h5>Business Hours</h5>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
 
             <img src="/static/contactus.png"
                  alt="Contact Best Cars Dealerships"
-                 style="width: 200px; max-width: 100%;
-                        margin-top: 20px;">
+                 class="contact-image">
 
         </div>
-    </div>
+
+    </main>
+
+    <script src="/static/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
