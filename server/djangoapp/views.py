@@ -12,11 +12,19 @@ from .restapis import (
     post_review
 )
 
-
 def get_dealerships(request, state="All"):
     endpoint = "/fetchDealers" if state == "All" else "/fetchDealers/" + state
+
+    print("Endpoint:", endpoint)
+
     dealerships = get_request(endpoint)
-    return JsonResponse({"status": 200, "dealers": dealerships})
+
+    print("Received dealerships:", dealerships)
+
+    return JsonResponse({
+        "status": 200,
+        "dealers": dealerships
+    })
     print("Dealerships:", dealerships)
 
 def get_dealer_details(request, dealer_id):
