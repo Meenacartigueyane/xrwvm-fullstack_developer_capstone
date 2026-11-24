@@ -3,7 +3,7 @@
 ## Repository Name
 xrwvm-fullstack_developer_capstone
 
-## Project Name
+## Project Names
 fullstack_developer_capstone
 
 ## Project Description
