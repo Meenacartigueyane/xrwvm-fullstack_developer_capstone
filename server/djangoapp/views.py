@@ -2,7 +2,7 @@
 import json
 
 from django.http import JsonResponse
-from django.contrib.auth import authenticate, login as django_login
+from django.contrib.auth import authenticate, login as django_login, logout as django_logout
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
 
@@ -144,3 +144,14 @@ def analyze_review(request):
         return JsonResponse(sentiment, safe=False)
 
     return JsonResponse({"error": "Invalid request method"}, status=405)
+@csrf_exempt
+def logout_request(request):
+    if request.method == "GET":
+        django_logout(request)
+        return JsonResponse({
+            "userName": ""
+        })
+
+    return JsonResponse({
+        "status": "Invalid request method"
+    }, status=405)
