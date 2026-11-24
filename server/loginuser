@@ -1,0 +1,11 @@
+Task 5: Login User
+
+Command:
+curl -i -X POST http://localhost:8000/djangoapp/login \
+-H "Content-Type: application/json" \
+-d '{"userName":"meenacartigueyane","password":"[REDACTED]"}'
+
+Output:
+HTTP/1.1 200 OK
+
+{"status": "Authenticated", "userName": "meenacartigueyane"}

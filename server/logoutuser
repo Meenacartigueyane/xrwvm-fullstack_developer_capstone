@@ -1,0 +1,9 @@
+Task 6: Logout User
+
+Command:
+curl -i -X GET "http://localhost:8000/djangoapp/logout" -b cookies.txt
+
+Output:
+HTTP/1.1 200 OK
+
+{"userName": ""}
