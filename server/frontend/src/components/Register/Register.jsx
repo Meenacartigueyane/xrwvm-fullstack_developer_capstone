@@ -5,6 +5,9 @@ import './Register.css';
 
 function Register() {
   const [userName, setUserName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
@@ -19,8 +22,11 @@ function Register() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          userName: userName,
-          password: password,
+          userName,
+          firstName,
+          lastName,
+          email,
+          password,
         }),
       });
 
@@ -40,13 +46,13 @@ function Register() {
 
   return (
     <div className="register-container">
-      <h2>Create an Account</h2>
+      <h2>Sign-up</h2>
 
       <form onSubmit={handleRegister}>
         <div>
           <input
             type="text"
-            placeholder="Enter username"
+            placeholder="Username"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
             required
@@ -55,8 +61,38 @@ function Register() {
 
         <div>
           <input
+            type="text"
+            placeholder="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+        </div>
+
+        <div>
+          <input
             type="password"
-            placeholder="Enter password"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
