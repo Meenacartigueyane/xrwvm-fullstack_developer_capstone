@@ -1,308 +1,114 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best Cars</title>
 
-    <title>About Us - Best Cars Dealerships</title>
-
-    <!-- Required CSS files -->
     <link rel="stylesheet" href="/static/bootstrap.min.css">
     <link rel="stylesheet" href="/static/style.css">
-
-    <style>
-        body {
-            background-color: #f5f7fa;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            background-color: darkturquoise;
-            min-height: 80px;
-        }
-
-        .navbar-brand {
-            font-size: 25px;
-            font-weight: bold;
-            color: #222 !important;
-        }
-
-        .nav-link {
-            color: #222 !important;
-            font-weight: 500;
-            margin-left: 15px;
-        }
-
-        .nav-link.active {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-
-        .about-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-        }
-
-        .about-header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .about-header h1 {
-            font-size: 34px;
-            font-weight: bold;
-        }
-
-        .about-description {
-            max-width: 950px;
-            margin: auto;
-            line-height: 1.8;
-            font-size: 16px;
-            text-align: center;
-        }
-
-        .team-heading {
-            text-align: center;
-            margin: 40px 0 25px;
-            font-weight: bold;
-        }
-
-        .team-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .team-card {
-            width: 30%;
-            min-width: 250px;
-            max-width: 350px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            background: white;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-            transition: transform 0.2s;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .team-card img {
-            width: 100%;
-            height: 230px;
-            object-fit: cover;
-        }
-
-        .team-card .card-body {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .team-card h5 {
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .team-card p {
-            line-height: 1.6;
-            font-size: 14px;
-        }
-
-        .team-card a {
-            color: #087f8c;
-            text-decoration: none;
-            overflow-wrap: anywhere;
-        }
-
-        @media (max-width: 768px) {
-            .about-container {
-                width: 95%;
-                padding: 18px;
-            }
-
-            .team-card {
-                width: 100%;
-                max-width: 400px;
-            }
-
-            .about-header h1 {
-                font-size: 27px;
-            }
-
-            .navbar-brand {
-                font-size: 20px;
-            }
-        }
-    </style>
 </head>
-
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">Best Cars</a>
 
-            <a class="navbar-brand" href="/">Dealerships</a>
-
-            <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarText"
-                    aria-controls="navbarText"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active"
-                           href="/about"
-                           aria-current="page">About Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contact Us</a>
-                    </li>
-
-                </ul>
-            </div>
+        <div class="navbar-nav">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link active" aria-current="page" href="/about">
+                About Us
+            </a>
+            <a class="nav-link" href="/contact">Contact Us</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- About Us Section -->
-    <main class="about-container">
+<div class="container mt-5">
 
-        <div class="about-header">
-            <h1>About Us</h1>
+    <h1 class="text-center mb-4">About Us</h1>
+
+    <section class="mb-5">
+        <h2>Welcome to Best Cars</h2>
+
+        <p>
+            Best Cars is a car dealership that offers a wide range of
+            quality vehicles to customers. We aim to provide a convenient
+            car-buying experience through our vehicle listings,
+            dealership information, and customer support services.
+            Our goal is to help customers find the right vehicle and
+            make their car-buying journey simple and enjoyable.
+        </p>
+    </section>
+
+    <section>
+        <h2 class="text-center mb-4">Meet Our Team</h2>
+
+        <div class="row">
+
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                     alt="John Smith"
+                     class="img-fluid rounded-circle mb-3"
+                     style="width:150px;height:150px;object-fit:cover;">
+
+                <h3>John Smith</h3>
+                <h5>Sales Manager</h5>
+                <p>
+                    John manages the sales team and helps customers
+                    choose vehicles that meet their needs.
+                </p>
+                <p>
+                    <a href="mailto:john.smith@bestcars.com">
+                        john.smith@bestcars.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                     alt="Sarah Johnson"
+                     class="img-fluid rounded-circle mb-3"
+                     style="width:150px;height:150px;object-fit:cover;">
+
+                <h3>Sarah Johnson</h3>
+                <h5>Customer Support Executive</h5>
+                <p>
+                    Sarah assists customers with their questions
+                    and provides support throughout the buying process.
+                </p>
+                <p>
+                    <a href="mailto:sarah.johnson@bestcars.com">
+                        sarah.johnson@bestcars.com
+                    </a>
+                </p>
+            </div>
+
+            <div class="col-md-4 text-center mb-4">
+                <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                     alt="David Williams"
+                     class="img-fluid rounded-circle mb-3"
+                     style="width:150px;height:150px;object-fit:cover;">
+
+                <h3>David Williams</h3>
+                <h5>Vehicle Specialist</h5>
+                <p>
+                    David provides vehicle information and helps
+                    customers understand available car features.
+                </p>
+                <p>
+                    <a href="mailto:david.williams@bestcars.com">
+                        david.williams@bestcars.com
+                    </a>
+                </p>
+            </div>
+
         </div>
+    </section>
 
-        <section class="about-description">
+</div>
 
-            <h3>Welcome to Best Cars Dealerships</h3>
-
-            <p>
-                Best Cars Dealerships is a trusted automobile dealership
-                network committed to helping customers find quality
-                vehicles that suit their needs and preferences. We aim
-                to provide a convenient and reliable experience by
-                connecting customers with dealerships across the
-                United States.
-            </p>
-
-            <p>
-                Customers can explore dealership locations, search for
-                dealers by state, view dealership information, and read
-                reviews shared by other customers. Our goal is to make
-                the car-buying journey easier through accessible
-                information, transparency, and excellent customer service.
-            </p>
-
-        </section>
-
-        <!-- Meet Our Team -->
-        <h3 class="team-heading">Meet Our Team</h3>
-
-        <section class="team-container">
-
-            <!-- Team Member 1 -->
-            <div class="team-card">
-
-                <img
-                    src="https://randomuser.me/api/portraits/men/32.jpg"
-                    alt="Michael Anderson - Project Manager">
-
-                <div class="card-body">
-                    <h5>Michael Anderson</h5>
-
-                    <p><strong>Role:</strong> Project Manager</p>
-
-                    <p>
-                        Michael oversees project planning and coordinates
-                        the development team. He ensures that the platform
-                        meets customer requirements.
-                    </p>
-
-                    <p>
-                        <a href="mailto:michael.anderson@bestcars.com">
-                            michael.anderson@bestcars.com
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="team-card">
-
-                <img
-                    src="https://randomuser.me/api/portraits/women/44.jpg"
-                    alt="Sarah Johnson - Frontend Developer">
-
-                <div class="card-body">
-                    <h5>Sarah Johnson</h5>
-
-                    <p><strong>Role:</strong> Frontend Developer</p>
-
-                    <p>
-                        Sarah designs and develops user-friendly website
-                        pages. She focuses on responsive layouts and
-                        improving the customer experience.
-                    </p>
-
-                    <p>
-                        <a href="mailto:sarah.johnson@bestcars.com">
-                            sarah.johnson@bestcars.com
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="team-card">
-
-                <img
-                    src="https://randomuser.me/api/portraits/men/46.jpg"
-                    alt="David Wilson - Backend Developer">
-
-                <div class="card-body">
-                    <h5>David Wilson</h5>
-
-                    <p><strong>Role:</strong> Backend Developer</p>
-
-                    <p>
-                        David develops backend services and manages
-                        application data. He works on dealership
-                        information, user accounts, and reviews.
-                    </p>
-
-                    <p>
-                        <a href="mailto:david.wilson@bestcars.com">
-                            david.wilson@bestcars.com
-                        </a>
-                    </p>
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-
-    <script src="/static/bootstrap.bundle.min.js"></script>
-
+<script src="/static/bootstrap.bundle.min.js"></script>
 </body>
 </html>
