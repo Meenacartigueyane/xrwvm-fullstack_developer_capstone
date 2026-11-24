@@ -1,68 +1,134 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <!-- Link the style sheet here -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Dealerships</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="/static/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
-        </div>
-      </div>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
-        </div>
-      </div>
+<body>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
-    </div>
-    </div>
-    </div>
-    
-</div>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light"
+         style="background-color: darkturquoise; min-height: 80px;">
+        <div class="container-fluid">
+            <h2 style="padding-right: 5%;">Dealerships</h2>
 
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarText">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Us Description -->
+    <div class="card"
+         style="width: 80%; margin: auto; margin-top: 4%; padding: 25px;">
+
+        <div class="banner" name="about-header">
+            <h1 class="text-center">About Us</h1>
+        </div>
+
+        <div class="card-body text-center">
+            <h3>Welcome to Our Car Dealership Platform</h3>
+
+            <p>
+                Our car dealership platform helps customers explore
+                different car dealerships, view available cars, and
+                learn more about their preferred dealerships.
+                Users can register, log in, share their experiences,
+                and submit reviews about dealership services.
+            </p>
+
+            <p>
+                Our team is dedicated to developing a user-friendly
+                platform that makes finding and exploring car
+                dealerships simple and convenient.
+            </p>
+        </div>
+
+        <!-- Team Members -->
+        <h3 class="text-center mt-4 mb-4">Meet Our Team</h3>
+
+        <div style="display: flex; flex-wrap: wrap;
+                    justify-content: space-around; gap: 20px;">
+
+            <!-- Team Member 1 -->
+            <div class="card" style="width: 30%; min-width: 220px;">
+                <img class="card-img-top"
+                     src="/static/person.png"
+                     alt="Team Member 1"
+                     style="height: 220px; object-fit: cover;">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">YOUR NAME 1</h5>
+                    <p><strong>Role:</strong> YOUR ROLE 1</p>
+                    <p class="card-text">
+                        Contributed to the development of the
+                        car dealership application and its features.
+                    </p>
+                    <p>YOUR_EMAIL_1</p>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="card" style="width: 30%; min-width: 220px;">
+                <img class="card-img-top"
+                     src="/static/person.png"
+                     alt="Team Member 2"
+                     style="height: 220px; object-fit: cover;">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">YOUR NAME 2</h5>
+                    <p><strong>Role:</strong> YOUR ROLE 2</p>
+                    <p class="card-text">
+                        Worked on application functionality and
+                        helped improve the user experience.
+                    </p>
+                    <p>YOUR_EMAIL_2</p>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="card" style="width: 30%; min-width: 220px;">
+                <img class="card-img-top"
+                     src="/static/person.png"
+                     alt="Team Member 3"
+                     style="height: 220px; object-fit: cover;">
+
+                <div class="card-body text-center">
+                    <h5 class="card-title">YOUR NAME 3</h5>
+                    <p><strong>Role:</strong> YOUR ROLE 3</p>
+                    <p class="card-text">
+                        Supported the project development,
+                        testing, and implementation activities.
+                    </p>
+                    <p>YOUR_EMAIL_3</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
 </html>
