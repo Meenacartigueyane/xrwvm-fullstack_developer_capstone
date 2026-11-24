@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 backend_url = os.getenv(
-    'backend_url', default="http://localhost:3030")
+    'backend_url',
+    default="https://meenac230820-3030.theiadockernext-1-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai")   
 
 sentiment_analyzer_url = os.getenv(
     'sentiment_analyzer_url',
