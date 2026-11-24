@@ -30,3 +30,24 @@ jobs:
         run: |
              flake8 . --exclude=djangoenv,.git --count --select=E9,F63,F7,F82 --show-source --statistics
              flake8 . --exclude=djangoenv,.git,server/djangoapp/migrations --count --max-complexity=10 --max-line-length=79 --extend-ignore=E501,E722,E131,E302,W292,W391 --statistics      
+
+  lint_javascript:
+    name: Lint JavaScript Files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: server/frontend
+
+      - name: Lint JavaScript Files
+        run: ./node_modules/.bin/eslint src --ext .js,.jsx
+        working-directory: server/frontend
