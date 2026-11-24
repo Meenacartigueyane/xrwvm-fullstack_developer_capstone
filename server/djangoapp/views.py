@@ -1,6 +1,6 @@
 
 import json
-from .models import CarMake, CarModel
+from .models import CarModel
 from .populate import initiate
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login as django_login, logout as django_logout
@@ -172,4 +172,4 @@ def get_cars(request):
         })
 
     return JsonResponse({"CarModels": cars})
-  
+
