@@ -10,10 +10,12 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    setMessage('');
 
     try {
       const response = await fetch('/djangoapp/register', {
@@ -106,7 +108,10 @@ function Register() {
 
       <p>
         Already have an account?{' '}
-        <button type="button" onClick={() => navigate('/login')}>
+        <button
+          type="button"
+          onClick={() => navigate('/login')}
+        >
           Login
         </button>
       </p>
